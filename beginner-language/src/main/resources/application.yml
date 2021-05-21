@@ -1,0 +1,15 @@
+spring:
+  swagger2:
+    enable: true
+  redis:
+    host: 192.168.6.206
+    port: 6379
+    password: 123456
+
+  code: 28
+server:
+  port: 9099
+
+
+logging:
+  file: ./logs/language.log

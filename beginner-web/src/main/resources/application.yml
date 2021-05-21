@@ -1,0 +1,6 @@
+server:
+  port: 7075
+  max-http-header-size: 10000000
+spring:
+  application:
+    name: web

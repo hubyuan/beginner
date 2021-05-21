@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: amqp
+  rabbitmq:
+    host: 192.168.6.229
+    port: 5672
+    username: nikey
+    password: nikey

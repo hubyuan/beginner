@@ -1,0 +1,7 @@
+ArrayList如何做到线程安全
+
+api:
+Collections.synchronizedList (优点：只是对集合add的操作的时候加了同步；缺点：其他的操作还是要加上同步代码的操作，以免其他线程的操作引发数据脏读。)
+
+使用synchronized关键字；
+

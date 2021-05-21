@@ -1,0 +1,10 @@
+spring:
+  datasource:
+      url: jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=true
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initialSize: 20 #初始化20个
+      maxActive: 150 #最大150个
+      maxWait: 5000 #最大等待时间 5s
+      minEvictableIdleTimeMillis: 300000 #最小生存的时间，单位是毫秒

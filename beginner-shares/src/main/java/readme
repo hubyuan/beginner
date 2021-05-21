@@ -1,0 +1,44 @@
+版本1：
+
+系统分为
+
+服务端
+（功能）
+股票
+对股票的操作
+bp 买入
+sp 卖出
+cp 前一成交价
+中间值
+
+排序：按照价格和时间（queue）
+
+接口：
+买-以最低价格
+卖-以最低价格
+
+
+用户端
+（使用restful风格实现）
+
+模拟买入卖出
+
+
+
+
+
+
+class shares
+
+class shares
+
+class money extends shares
+
+class short extends shares
+
+
+原生jpa	原生jpa带事务	batch扩展jpa-size500	batch扩展jpa-size2000	batch扩展jpa-size20000	jdbc-size500	jdbc-size20000
+100条记录	568	264	222	228	347	200	158
+1000条记录	3564	1095	1050	947	992	1975	1218
+10000条记录	23942	4924	3489	3828	3379	11875	11901
+
