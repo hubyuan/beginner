@@ -1,5 +1,6 @@
 package cn.wfy.单例;
 
+import cn.wfy.创建型模式.单例.SpringTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
