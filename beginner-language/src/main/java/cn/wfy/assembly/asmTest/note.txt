@@ -1,0 +1,9 @@
+1.生成的代理类Dao$$EnhancerByCGLIB$$7ddef0e2继承了要代理的Dao类并实现Factory【这里的Factory应该是cglib的工厂接口，不做关心】
+2.代理类会为委托方法【以Dao类的select为例】生成两个方法，以final修饰，一个重写select
+
+fastclass机制
+cglib执行代理方法效率快的原因:采用fastclass机制
+简单来说就是:为代理类和被代理类各生产一个class，该class会为代理类或被代理类分配一个index(int)，该index当做为一个入参，
+fastclass可以直接定位到要调用的方法直接进行调用，省去反射调用【反射效率较低】，即对一个类的方法建立索引，通过索引直接调用相应方法。
+
+
