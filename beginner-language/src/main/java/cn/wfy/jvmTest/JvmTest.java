@@ -10,9 +10,16 @@ public class JvmTest {
 
     public static void main(String[] args) {
 
-        byte[] placeholder = new byte[64 * 1024 * 1024];
-//        System.gc();
+        JvmTest jvmTest = new JvmTest();
+        jvmTest.bbb();
+        while (true) {
+            byte[] bytes = new byte[1024 * 1024];
+        }
+    }
 
+    private void bbb() {
+        Bbb bbb = new Bbb();
+        String age = bbb.aaa.getAge();
     }
 
 }
