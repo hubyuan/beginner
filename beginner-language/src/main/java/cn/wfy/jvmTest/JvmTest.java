@@ -18,8 +18,11 @@ public class JvmTest {
     }
 
     private void bbb() {
-        Bbb bbb = new Bbb();
-        String age = bbb.aaa.getAge();
+        boolean flag = true;
+        if (flag) {
+            Bbb bbb = new Bbb();
+            String age = bbb.aaa.getAge();
+        }
     }
 
 }
