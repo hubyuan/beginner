@@ -1,14 +1,9 @@
-package cn.wfy.proxy.segmentfault;
+package cn.wfy.proxy.segmentfault.mock;
 
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.handler.codec.DecoderResult;
 import io.netty.handler.codec.http.FullHttpResponse;
-import io.netty.util.CharsetUtil;
-import io.netty.util.concurrent.EventExecutorGroup;
 
 public class HttpProxyClientHandle extends ChannelInboundHandlerAdapter {
 
@@ -23,14 +18,8 @@ public class HttpProxyClientHandle extends ChannelInboundHandlerAdapter {
         FullHttpResponse response = (FullHttpResponse) msg;
         //修改http响应体返回至客户端
         response.headers().add("test","from proxy");
-        printMsg(response.copy());
+        FullHttpResponse copy = response.copy();
 
         clientChannel.writeAndFlush(msg);
-    }
-
-    private void printMsg(FullHttpResponse copy) {
-        ByteBuf content1 = copy.content();
-        String s1 = content1.toString(CharsetUtil.UTF_8);
-        System.out.println("响应参数：" + s1);
     }
 }

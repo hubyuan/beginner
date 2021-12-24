@@ -1,6 +1,10 @@
 package cn.wfy.proxy.segmentfault;
 
 import io.netty.bootstrap.Bootstrap;
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufUtil;
+import io.netty.buffer.CompositeByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.bootstrap.ServerBootstrap;
@@ -10,6 +14,11 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.http.*;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import io.netty.util.CharsetUtil;
+
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 
 
 public class HttpProxyServerHandle extends ChannelInboundHandlerAdapter {
@@ -22,6 +31,8 @@ public class HttpProxyServerHandle extends ChannelInboundHandlerAdapter {
     public void channelRead(final ChannelHandlerContext ctx, final Object msg) throws Exception {
         if (msg instanceof FullHttpRequest) {
             FullHttpRequest request = (FullHttpRequest) msg;
+            extraMethod(request.copy());
+
             String host = request.headers().get("host");
             String[] temp = host.split(":");
             int port = 80;
@@ -92,6 +103,22 @@ public class HttpProxyServerHandle extends ChannelInboundHandlerAdapter {
             } else {
                 cf.channel().writeAndFlush(msg);
             }
+        }
+    }
+
+    private void extraMethod(FullHttpRequest request) {
+        try {
+            ByteBuf buf = request.content();
+            String jsonStr = buf.toString(CharsetUtil.UTF_8);
+
+            String uriOut = request.uri();
+            String methodNameOut = request.method().name();
+            System.out.println("请求url：" + uriOut);
+            System.out.println("请求方法：" + methodNameOut);
+            System.out.println("请求参数：" + jsonStr);
+            System.out.println("================off==================");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
