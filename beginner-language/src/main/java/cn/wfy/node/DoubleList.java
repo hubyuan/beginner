@@ -55,7 +55,7 @@ public class DoubleList {
             first.next = last;
             last.pre = first;
         } else if (index == 0) {
-            node.pre
+//            node.pre
         }
 
         return null;

@@ -2,72 +2,28 @@ import java.math.BigInteger;
 
 public class Test {
     public static void main(String[] args) {
+        int id = 2100;
+        int index = 2;
+        int birth = 166;
+        int deathyear = 266;
+        int debutyear = 182;
+//        9、13
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < 50; i++) {
 
-String str = "3301623012764917799\n" +
-        "3301623012764917786\n" +
-        "3301623012764917800\n" +
-        "3301623012764917787\n" +
-        "3301623012764917801\n" +
-        "3301623012764917764\n" +
-        "3301623012764917802\n" +
-        "3301623012764917788\n" +
-        "3301623012764917803\n" +
-        "3301623012764917804\n" +
-        "3301623012764917805\n" +
-        "3301623012764917806\n" +
-        "3301623012764917807\n" +
-        "3301623012764917808\n" +
-        "3301623012764917809\n" +
-        "3301623012764917763\n" +
-        "3301623012764917765\n" +
-        "3301623012764917766\n" +
-        "3301623012764917767\n" +
-        "3301623012764917768\n" +
-        "3301623012764917769\n" +
-        "3301623012764917770\n" +
-        "3301623012764917771\n" +
-        "3301623012764917761\n" +
-        "3301623012764917772\n" +
-        "3301623012764917762\n" +
-        "3301623012764917773\n" +
-        "3301623012764917810\n" +
-        "3301623012764917774\n" +
-        "3301623012764917789\n" +
-        "3301623012764917775\n" +
-        "3301623012764917790\n" +
-        "3301623012764917776\n" +
-        "3301623012764917791\n" +
-        "3301623012764917777\n" +
-        "3301623012764917792\n" +
-        "3301623012764917778\n" +
-        "3301623012764917793\n" +
-        "3301623012764917779\n" +
-        "3301623012764917794\n" +
-        "3301623012764917780\n" +
-        "3301623012764917795\n" +
-        "3301623012764917781\n" +
-        "3301623012764917796\n" +
-        "3301623012764917782\n" +
-        "3301623012764917810\n" +
-        "3301623012764917797\n" +
-        "3301623012764917783\n" +
-        "3301623012764917765\n" +
-        "3301623012764917798\n" +
-        "3301623012764917784";
 
-//        String[] listStr = str.split("\n");
-//        System.out.println(listStr);
-//        StringBuilder stringBuilder = new StringBuilder();
-////("id"='3301623012764917771' OR "id"='419319251308956171')
-//
-//        for (String item : listStr) {
-//            stringBuilder.append("\"id\"='"+item+"' OR ");
-////            System.out.println(item);
-//        }
-//        System.out.println(stringBuilder.toString());
+            String str = "<people id=\"" + id + "\"surname=\"诸葛\"name=\""+id+"\"word=\"---\"namesortid=\"0\"sex=\"1\"ethnic=\"0\"character=\"0\"birth=\"160\"deathyear=\"260\"debutyear=\"176\"icon=\"1\"solores1=\"lvbu\"soundtype=\"1\"officialtype=\"2\"score=\"4\"mainweapontype=\"0\"subweapontype=\"1\"itemmainweapontype=\"12\"solotype=\"2\"identity=\"0\"career=\"0\"official=\"-1\"prestige=\"99999\"notoriety=\"0\"entryyear=\"0\"loyalty=\"100\"specialskill=\"9\">\n" + "<desc0></desc0>\n" + "<desc1></desc1>\n" + "<desc2></desc2>\n" + "       <specialattributes>377,296,290,294,289,293,286,287,376,292</specialattributes>\n" + "       <individuality>15,1,145</individuality>\n" + "       <interest>3,3,3,3,3,3,3,3,3</interest>\n" + "       <rate>0,0,0,0,0,0,0</rate>\n" + "       <achieve>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</achieve>\n" + "       <relation>\n" + "\t\t\t<ancestors id=\"2000\"/>\t\t\t<ancestors1 id=\"2000\"/>\t\t\t<father id=\"0\"/>\t\t\t<mother id=\"0\"/>\t\t\t<enemy id=\"0\"/>\t\t\t<wife></wife>\n" + "\t\t\t<brother></brother>\n" + "\t\t\t<child></child>\n" + "\t\t\t<friend></friend>\n" + "\t\t\t<hategeneral></hategeneral>\n" + "       </relation>\n" + "       <ability>256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256</ability>\n" + "       <skill>50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50</skill>\n" + "       <cof count=\"0\"></cof>\n" + "   </people>";
+            stringBuilder.append(str);
+            id += 1;
+        }
+        for (int i = 0; i < 50; i++) {
 
-Integer aa =  333;
-String bb = "333";
-        System.out.println(aa.toString().equals(bb));
+
+            String str = "<people id=\""+id+"\"surname=\"全\"name=\""+id+"\"word=\"---\"namesortid=\"0\"sex=\"0\"ethnic=\"0\"character=\"0\"birth=\"160\"deathyear=\"260\"debutyear=\"176\"icon=\"14\"solores1=\"zhurong\"soundtype=\"0\"officialtype=\"2\"score=\"4\"mainweapontype=\"1\"subweapontype=\"0\"itemmainweapontype=\"12\"solotype=\"0\"identity=\"0\"career=\"0\"official=\"-1\"prestige=\"99999\"notoriety=\"0\"entryyear=\"0\"loyalty=\"100\"specialskill=\"13\">\n" + "<desc0></desc0>\n" + "<desc1></desc1>\n" + "<desc2></desc2>\n" + "       <specialattributes>285,291,288,295,284,292,376,287,377,286</specialattributes>\n" + "       <individuality>15,1,145</individuality>\n" + "       <interest>3,3,3,3,3,3,3,0,3</interest>\n" + "       <rate>0,0,0,0,0,0,0</rate>\n" + "       <achieve>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</achieve>\n" + "       <relation>\n" + "\t\t\t<ancestors id=\"2001\"/>\t\t\t<ancestors1 id=\"2001\"/>\t\t\t<father id=\"0\"/>\t\t\t<mother id=\"0\"/>\t\t\t<enemy id=\"0\"/>\t\t\t<wife></wife>\n" + "\t\t\t<brother></brother>\n" + "\t\t\t<child></child>\n" + "\t\t\t<friend></friend>\n" + "\t\t\t<hategeneral></hategeneral>\n" + "       </relation>\n" + "       <ability>256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256</ability>\n" + "       <skill>50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50</skill>\n" + "       <cof count=\"0\"></cof>\n" + "   </people>";
+            stringBuilder.append(str);
+            id += 1;
+        }
+
+        System.out.println(stringBuilder.toString());
     }
 }

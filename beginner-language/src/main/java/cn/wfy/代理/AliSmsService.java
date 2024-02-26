@@ -8,6 +8,7 @@ package cn.wfy.代理;
 public class AliSmsService {
     public String send(String message) {
         System.out.println("send message:" + message);
+        String pppp = message+"aaa";
         return message;
     }
 }
