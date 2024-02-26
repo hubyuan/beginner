@@ -34,7 +34,8 @@
         <module>beginner-mybatis</module>
         <module>beginner-shares</module>
         <module>beginner-swagger</module>
-        <!--<module>beginner-apache-commons</module>-->
+        <module>beginner-apache-commons</module>
+        <module>beginner-distributed</module>
     </modules>
 
     <properties>
@@ -83,8 +84,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
-
-
 
     </dependencies>
 

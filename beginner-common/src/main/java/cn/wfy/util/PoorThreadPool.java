@@ -1,6 +1,7 @@
 package cn.wfy.util;
 
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -19,7 +20,7 @@ public class PoorThreadPool {
 
     public static ThreadPoolExecutor getConnetion() {
         if (poolExecutor == null) {
-            poolExecutor = new ThreadPoolExecutor(corePoolSize, maxiMumPoolSize, keepAliveTime, TimeUnit.SECONDS, new ArrayBlockingQueue<>(capacity));
+            poolExecutor = new ThreadPoolExecutor(corePoolSize, maxiMumPoolSize, keepAliveTime, TimeUnit.SECONDS,  new ArrayBlockingQueue<>(capacity),new ThreadPoolExecutor.CallerRunsPolicy());
         }
         return poolExecutor;
     }
