@@ -34,8 +34,9 @@
         <module>beginner-mybatis</module>
         <module>beginner-shares</module>
         <module>beginner-swagger</module>
-        <module>beginner-apache-commons</module>
+<!--        <module>beginner-apache-commons</module>-->
         <module>beginner-distributed</module>
+        <module>beginner-blockchain</module>
     </modules>
 
     <properties>
